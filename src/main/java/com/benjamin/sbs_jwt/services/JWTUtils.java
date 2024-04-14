@@ -3,6 +3,7 @@ package com.benjamin.sbs_jwt.services;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
@@ -14,8 +15,7 @@ public class JWTUtils {
     public JWTUtils (){
         String secretString = "rh9ih84948484839u4bf84h3i23028202080trv67rb5gw78ibv78w4b9789bwy347vb45yvb847y5v4y574y54y57y457465948394639bfr8vb837438";
         byte[] keyBytes = Base64.getDecoder().decode(secretString.getBytes(StandardCharsets.UTF_8));
-        this.secretKey = new SecretKey() {
-        }
+        this.secretKey = new SecretKeySpec()
     }
     
 }

@@ -9,12 +9,12 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_NULL)  // This annotation is used during serialization (converting Java objects into JSON). It tells Jackson to only include fields in the resulting JSON that have non-null values. This can help reduce the size of the JSON output and eliminate unnecessary information, especially if your RequestResponse class has many fields.
 public class RequestResponse {
     private String error;
-    private String error;
-    private String error;
-    private String error;
-    private String error;
-    private String error;
-    private String error;
+    private String message;
+    private String token;
+    private String refreshToken;
+    private String expirationTime;
+    private String name;
+    private String email;
     private String error;
     private String error;
     private String error;

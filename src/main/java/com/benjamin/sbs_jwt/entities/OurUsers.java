@@ -1,6 +1,7 @@
 package com.benjamin.sbs_jwt.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -14,7 +15,7 @@ import java.util.Collection;
 @Table(name = "users")
 public class OurUsers implements UserDetails {
     @Id
-
+    @GeneratedValue
     private Integer id;
     private String email;
     private String password;

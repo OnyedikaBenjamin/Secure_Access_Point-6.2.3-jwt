@@ -1,5 +1,6 @@
 package com.benjamin.sbs_jwt.services;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,6 +11,8 @@ import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.function.Function;
 
 @Component
 public class JWTUtils {
@@ -29,7 +32,29 @@ public class JWTUtils {
                 .expiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
                 .signWith(secretKey)
                 .compact();
+    }
+    public String generateRefreshToken(HashMap<String, Object> claims, UserDetails userDetails) {
+        return Jwts.builder()
+                .claims(claims)
+                .subject(userDetails.getUsername())
+                .issuedAt(new Date(System.currentTimeMillis()))
+                .expiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
+                .signWith(secretKey)
+                .compact();
+    }
 
+    public String extractUsername(String token){
+        return extractClaims(token, Claims::getSubject);
+    }
+
+    private<T> T extractClaims(String token, Function<Claims, T> claimsTFunction) {
+        return claimsTFunction
+                .apply(Jwts.parser()
+                        .verifyWith(secretKey)
+                        .build()
+                        .parseSignedClaims(token)
+                        .getPayload()
+                );
     }
 
 }

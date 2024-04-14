@@ -6,5 +6,5 @@ import javax.crypto.SecretKey;
 
 @Component
 public class JWTUtils {
-    private SecretKey;
+    private SecretKey secretKey;
 }

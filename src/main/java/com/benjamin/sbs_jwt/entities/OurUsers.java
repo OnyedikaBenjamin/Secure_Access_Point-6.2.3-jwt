@@ -30,10 +30,10 @@ public class OurUsers implements UserDetails {
         return email;
     }
 
-    @Override
-    public String getPassword() {
-        return null;
-    }
+//    @Override
+//    public String getPassword() {
+//        return null;
+//    }
 
 
     @Override

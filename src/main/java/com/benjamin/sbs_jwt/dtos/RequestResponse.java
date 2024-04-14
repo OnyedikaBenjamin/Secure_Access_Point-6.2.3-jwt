@@ -15,9 +15,9 @@ public class RequestResponse {
     private String expirationTime;
     private String name;
     private String email;
-    private String error;
-    private String error;
-    private String error;
-    private String error;
+    private String role;
+    private String password;
+    private List<Product> productList;
+    private String ourUsers;
 
 }

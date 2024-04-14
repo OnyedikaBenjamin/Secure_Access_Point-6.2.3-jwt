@@ -14,6 +14,8 @@ public class JWTUtils {
     public JWTUtils (){
         String secretString = "rh9ih84948484839u4bf84h3i23028202080trv67rb5gw78ibv78w4b9789bwy347vb45yvb847y5v4y574y54y57y457465948394639bfr8vb837438";
         byte[] keyBytes = Base64.getDecoder().decode(secretString.getBytes(StandardCharsets.UTF_8));
+        this.secretKey = new SecretKey() {
+        }
     }
     
 }

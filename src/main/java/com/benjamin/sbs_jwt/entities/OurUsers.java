@@ -43,7 +43,7 @@ public class OurUsers implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override

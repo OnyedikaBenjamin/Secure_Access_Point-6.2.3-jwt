@@ -13,8 +13,12 @@ import java.util.Collection;
 @Entity
 @Table(name = "users")
 public class OurUsers implements UserDetails {
+    @Id
 
-    private Long id;
+    private Integer id;
+    private String email;
+    private String password;
+    private String role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

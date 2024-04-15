@@ -40,6 +40,7 @@ public class SecurityConfig {
                 );
         return httpSecurity.build();
     }
+
     @Bean
     public AuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();  // DaoAuthenticationProvider is explicitly used for loading users from the database or any other data layer and use it for authentication.

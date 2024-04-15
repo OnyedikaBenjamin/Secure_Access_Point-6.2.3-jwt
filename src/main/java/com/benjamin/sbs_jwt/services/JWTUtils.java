@@ -33,6 +33,7 @@ public class JWTUtils {
                 .signWith(secretKey)
                 .compact();
     }
+
     public String generateRefreshToken(HashMap<String, Object> claims, UserDetails userDetails) {
         return Jwts.builder()
                 .claims(claims)

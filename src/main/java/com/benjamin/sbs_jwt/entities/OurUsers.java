@@ -30,11 +30,6 @@ public class OurUsers implements UserDetails {
         return email;
     }
 
-//    @Override
-//    public String getPassword() {
-//        return null;
-//    }
-
     @Override
     public boolean isAccountNonExpired() {
         return true;

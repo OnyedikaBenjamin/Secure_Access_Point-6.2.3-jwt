@@ -25,16 +25,12 @@ public class AdminUsersController {
         return ResponseEntity.ok(productRepo.save(productToSave));
     }
 
-    @GetMapping("/users/alone")
+    @GetMapping("/user/alone")
     public ResponseEntity<Object> userAlone(){
         return ResponseEntity.ok("USERS alone can access this endpoint");
     }
     @GetMapping("/admin/user")
     public ResponseEntity<Object> adminAndUserApi(){
         return ResponseEntity.ok("ADMIN and USER can access this API");
-    }
-    @GetMapping("/admin/alone")
-    public ResponseEntity<Object> adminAlone(){
-        return ResponseEntity.ok("ADMIN alone can access this endpoint");
     }
 }

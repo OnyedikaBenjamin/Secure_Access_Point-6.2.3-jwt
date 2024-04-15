@@ -24,5 +24,4 @@ public class RequestResponse {
     private String password;
     private List<Product> productList;
     private OurUsers ourUsers;
-
 }

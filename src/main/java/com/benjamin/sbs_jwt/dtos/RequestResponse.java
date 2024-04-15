@@ -1,5 +1,6 @@
 package com.benjamin.sbs_jwt.dtos;
 
+import com.benjamin.sbs_jwt.entities.OurUsers;
 import com.benjamin.sbs_jwt.entities.Product;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -22,6 +23,6 @@ public class RequestResponse {
     private String role;
     private String password;
     private List<Product> productList;
-    private String ourUsers;
+    private OurUsers ourUsers;
 
 }

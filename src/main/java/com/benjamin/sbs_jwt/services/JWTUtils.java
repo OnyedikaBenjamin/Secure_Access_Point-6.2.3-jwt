@@ -49,6 +49,7 @@ public class JWTUtils {
         return extractClaims(token, Claims::getSubject);
     }
 
+
     private<T> T extractClaims(String token, Function<Claims, T> claimsTFunction) {
         return claimsTFunction
                 .apply(Jwts.parser()

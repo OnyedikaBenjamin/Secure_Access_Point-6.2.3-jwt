@@ -18,8 +18,6 @@ target/
 *.iws
 *.iml
 *.ipr
-*.env
-pom.xml
 
 ### NetBeans ###
 /nbproject/private/
@@ -33,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore config.env file
+config.env

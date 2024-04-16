@@ -1,6 +1,5 @@
 package com.benjamin.sbs_jwt.config;
 
-import com.benjamin.sbs_jwt.services.JWTUtils;
 import com.benjamin.sbs_jwt.services.OurUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

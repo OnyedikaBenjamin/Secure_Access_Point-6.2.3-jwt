@@ -1,5 +1,6 @@
 package com.benjamin.sbs_jwt.services;
 
+import com.benjamin.sbs_jwt.config.JWTUtils;
 import com.benjamin.sbs_jwt.dtos.RequestResponse;
 import com.benjamin.sbs_jwt.entities.OurUsers;
 import com.benjamin.sbs_jwt.repositories.UserRepo;

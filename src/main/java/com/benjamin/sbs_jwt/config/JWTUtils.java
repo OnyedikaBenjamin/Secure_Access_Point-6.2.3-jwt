@@ -1,4 +1,4 @@
-package com.benjamin.sbs_jwt.services;
+package com.benjamin.sbs_jwt.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

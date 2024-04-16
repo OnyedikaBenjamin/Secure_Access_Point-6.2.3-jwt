@@ -20,6 +20,9 @@ public class JWTUtils {
 
     public JWTUtils() {
         String secretString = System.getenv("SECRET_STRING");
+        if (secretString == null || secretString.isEmpty()) {
+            throw new IllegalArgumentException("SECRET_STRING environment variable not set");
+        }
         byte[] keyBytes = Base64.getDecoder().decode(secretString.getBytes(StandardCharsets.UTF_8));
         this.secretKey = new SecretKeySpec(keyBytes, "HmacSHA256");
     }

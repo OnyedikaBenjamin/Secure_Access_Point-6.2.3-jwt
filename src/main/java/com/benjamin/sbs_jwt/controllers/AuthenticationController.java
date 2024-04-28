@@ -33,8 +33,26 @@ public class AuthenticationController {
 //            await AsyncStorage.setItem('refreshToken', refreshToken);
 //        } catch (error) {
 //            console.error("Error storing tokens:", error);
-//            // Handle storage errors appropriately
 //        }
 //    };
 
+//    const logout = async () => {
+//        try {
+//            // Remove tokens from storage
+//            await AsyncStorage.removeItem('accessToken');
+//            await AsyncStorage.removeItem('refreshToken');
+//
+//            // Optionally clear other user data
+//            // ...
+//
+//            // Update UI
+//            // ...
+//
+//            // Navigate to Login Screen
+//            navigation.navigate('Login');
+//        } catch (error) {
+//            console.error("Logout Error:", error);
+//            // Handle errors appropriately, e.g., display an error message to the user
+//        }
+//    };
 }

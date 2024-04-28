@@ -44,7 +44,6 @@ public class AuthenticationController {
 //
 //            // Optionally clear other user data
 //            // Update UI
-//            // ...
 //
 //            // Navigate to Login Screen
 //            navigation.navigate('Login');

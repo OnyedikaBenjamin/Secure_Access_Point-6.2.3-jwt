@@ -26,4 +26,15 @@ public class AuthenticationController {
     public ResponseEntity <RequestResponse> refreshToken(@RequestBody RequestResponse refreshTokenRequest){
         return ResponseEntity.ok(authService.refreshToken(refreshTokenRequest));
     }
+
+//    const storeTokens = async (accessToken, refreshToken) => {
+//        try {
+//            await AsyncStorage.setItem('accessToken', accessToken);
+//            await AsyncStorage.setItem('refreshToken', refreshToken);
+//        } catch (error) {
+//            console.error("Error storing tokens:", error);
+//            // Handle storage errors appropriately
+//        }
+//    };
+
 }

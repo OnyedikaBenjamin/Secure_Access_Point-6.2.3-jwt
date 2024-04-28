@@ -19,6 +19,8 @@ public class OurUsers implements UserDetails {
     private String password;
     private String role;
 
+    private String name;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role));

@@ -43,7 +43,6 @@ public class AuthenticationController {
 //            await AsyncStorage.removeItem('refreshToken');
 //
 //            // Optionally clear other user data
-//
 //            // Update UI
 //            // ...
 //
